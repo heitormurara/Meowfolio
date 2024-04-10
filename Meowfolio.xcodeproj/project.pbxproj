@@ -144,19 +144,19 @@
 		1A556DFA2BC72ABE00EF192A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				1A556DFD2BC72AEE00EF192A /* CatList */,
+				1A556DFD2BC72AEE00EF192A /* BreedList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		1A556DFD2BC72AEE00EF192A /* CatList */ = {
+		1A556DFD2BC72AEE00EF192A /* BreedList */ = {
 			isa = PBXGroup;
 			children = (
 				1A556E082BC735A900EF192A /* Helpers */,
 				1A556DFB2BC72AEB00EF192A /* BreedListView.swift */,
 				1A556DFE2BC72AF900EF192A /* BreedListViewModel.swift */,
 			);
-			path = CatList;
+			path = BreedList;
 			sourceTree = "<group>";
 		};
 		1A556E032BC734A300EF192A /* Data Models */ = {
