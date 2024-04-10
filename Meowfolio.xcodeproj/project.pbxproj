@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A556DD02BC7275200EF192A /* MeowfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556DCF2BC7275200EF192A /* MeowfolioApp.swift */; };
+		1A556DD22BC7275200EF192A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556DD12BC7275200EF192A /* ContentView.swift */; };
+		1A556DD42BC7275400EF192A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A556DD32BC7275400EF192A /* Assets.xcassets */; };
+		1A556DD82BC7275400EF192A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A556DD72BC7275400EF192A /* Preview Assets.xcassets */; };
+		1A556DE22BC7275500EF192A /* MeowfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556DE12BC7275500EF192A /* MeowfolioTests.swift */; };
+		1A556DEC2BC7275500EF192A /* MeowfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556DEB2BC7275500EF192A /* MeowfolioUITests.swift */; };
+		1A556DEE2BC7275500EF192A /* MeowfolioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556DED2BC7275500EF192A /* MeowfolioUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A556DDE2BC7275500EF192A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A556DC42BC7275200EF192A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A556DCB2BC7275200EF192A;
+			remoteInfo = Meowfolio;
+		};
+		1A556DE82BC7275500EF192A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A556DC42BC7275200EF192A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A556DCB2BC7275200EF192A;
+			remoteInfo = Meowfolio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A556DCC2BC7275200EF192A /* Meowfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meowfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A556DCF2BC7275200EF192A /* MeowfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowfolioApp.swift; sourceTree = "<group>"; };
+		1A556DD12BC7275200EF192A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1A556DD32BC7275400EF192A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A556DD52BC7275400EF192A /* Meowfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Meowfolio.entitlements; sourceTree = "<group>"; };
+		1A556DD72BC7275400EF192A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1A556DDD2BC7275500EF192A /* MeowfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeowfolioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A556DE12BC7275500EF192A /* MeowfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowfolioTests.swift; sourceTree = "<group>"; };
+		1A556DE72BC7275500EF192A /* MeowfolioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeowfolioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A556DEB2BC7275500EF192A /* MeowfolioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowfolioUITests.swift; sourceTree = "<group>"; };
+		1A556DED2BC7275500EF192A /* MeowfolioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowfolioUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A556DC92BC7275200EF192A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A556DDA2BC7275500EF192A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A556DE42BC7275500EF192A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A556DC32BC7275200EF192A = {
+			isa = PBXGroup;
+			children = (
+				1A556DCE2BC7275200EF192A /* Meowfolio */,
+				1A556DE02BC7275500EF192A /* MeowfolioTests */,
+				1A556DEA2BC7275500EF192A /* MeowfolioUITests */,
+				1A556DCD2BC7275200EF192A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A556DCD2BC7275200EF192A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A556DCC2BC7275200EF192A /* Meowfolio.app */,
+				1A556DDD2BC7275500EF192A /* MeowfolioTests.xctest */,
+				1A556DE72BC7275500EF192A /* MeowfolioUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A556DCE2BC7275200EF192A /* Meowfolio */ = {
+			isa = PBXGroup;
+			children = (
+				1A556DCF2BC7275200EF192A /* MeowfolioApp.swift */,
+				1A556DD12BC7275200EF192A /* ContentView.swift */,
+				1A556DD32BC7275400EF192A /* Assets.xcassets */,
+				1A556DD52BC7275400EF192A /* Meowfolio.entitlements */,
+				1A556DD62BC7275400EF192A /* Preview Content */,
+			);
+			path = Meowfolio;
+			sourceTree = "<group>";
+		};
+		1A556DD62BC7275400EF192A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1A556DD72BC7275400EF192A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1A556DE02BC7275500EF192A /* MeowfolioTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A556DE12BC7275500EF192A /* MeowfolioTests.swift */,
+			);
+			path = MeowfolioTests;
+			sourceTree = "<group>";
+		};
+		1A556DEA2BC7275500EF192A /* MeowfolioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1A556DEB2BC7275500EF192A /* MeowfolioUITests.swift */,
+				1A556DED2BC7275500EF192A /* MeowfolioUITestsLaunchTests.swift */,
+			);
+			path = MeowfolioUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A556DCB2BC7275200EF192A /* Meowfolio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A556DF12BC7275500EF192A /* Build configuration list for PBXNativeTarget "Meowfolio" */;
+			buildPhases = (
+				1A556DC82BC7275200EF192A /* Sources */,
+				1A556DC92BC7275200EF192A /* Frameworks */,
+				1A556DCA2BC7275200EF192A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Meowfolio;
+			productName = Meowfolio;
+			productReference = 1A556DCC2BC7275200EF192A /* Meowfolio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1A556DDC2BC7275500EF192A /* MeowfolioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A556DF42BC7275500EF192A /* Build configuration list for PBXNativeTarget "MeowfolioTests" */;
+			buildPhases = (
+				1A556DD92BC7275500EF192A /* Sources */,
+				1A556DDA2BC7275500EF192A /* Frameworks */,
+				1A556DDB2BC7275500EF192A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A556DDF2BC7275500EF192A /* PBXTargetDependency */,
+			);
+			name = MeowfolioTests;
+			productName = MeowfolioTests;
+			productReference = 1A556DDD2BC7275500EF192A /* MeowfolioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1A556DE62BC7275500EF192A /* MeowfolioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A556DF72BC7275500EF192A /* Build configuration list for PBXNativeTarget "MeowfolioUITests" */;
+			buildPhases = (
+				1A556DE32BC7275500EF192A /* Sources */,
+				1A556DE42BC7275500EF192A /* Frameworks */,
+				1A556DE52BC7275500EF192A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A556DE92BC7275500EF192A /* PBXTargetDependency */,
+			);
+			name = MeowfolioUITests;
+			productName = MeowfolioUITests;
+			productReference = 1A556DE72BC7275500EF192A /* MeowfolioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A556DC42BC7275200EF192A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					1A556DCB2BC7275200EF192A = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					1A556DDC2BC7275500EF192A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 1A556DCB2BC7275200EF192A;
+					};
+					1A556DE62BC7275500EF192A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 1A556DCB2BC7275200EF192A;
+					};
+				};
+			};
+			buildConfigurationList = 1A556DC72BC7275200EF192A /* Build configuration list for PBXProject "Meowfolio" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A556DC32BC7275200EF192A;
+			productRefGroup = 1A556DCD2BC7275200EF192A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A556DCB2BC7275200EF192A /* Meowfolio */,
+				1A556DDC2BC7275500EF192A /* MeowfolioTests */,
+				1A556DE62BC7275500EF192A /* MeowfolioUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A556DCA2BC7275200EF192A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A556DD82BC7275400EF192A /* Preview Assets.xcassets in Resources */,
+				1A556DD42BC7275400EF192A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A556DDB2BC7275500EF192A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A556DE52BC7275500EF192A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A556DC82BC7275200EF192A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A556DD22BC7275200EF192A /* ContentView.swift in Sources */,
+				1A556DD02BC7275200EF192A /* MeowfolioApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A556DD92BC7275500EF192A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A556DE22BC7275500EF192A /* MeowfolioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A556DE32BC7275500EF192A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A556DEE2BC7275500EF192A /* MeowfolioUITestsLaunchTests.swift in Sources */,
+				1A556DEC2BC7275500EF192A /* MeowfolioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A556DDF2BC7275500EF192A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A556DCB2BC7275200EF192A /* Meowfolio */;
+			targetProxy = 1A556DDE2BC7275500EF192A /* PBXContainerItemProxy */;
+		};
+		1A556DE92BC7275500EF192A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A556DCB2BC7275200EF192A /* Meowfolio */;
+			targetProxy = 1A556DE82BC7275500EF192A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A556DEF2BC7275500EF192A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1A556DF02BC7275500EF192A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		1A556DF22BC7275500EF192A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Meowfolio/Meowfolio.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Meowfolio/Preview Content\"";
+				DEVELOPMENT_TEAM = 5Q3KXH668K;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = heitormurara.Meowfolio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A556DF32BC7275500EF192A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Meowfolio/Meowfolio.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Meowfolio/Preview Content\"";
+				DEVELOPMENT_TEAM = 5Q3KXH668K;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = heitormurara.Meowfolio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1A556DF52BC7275500EF192A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5Q3KXH668K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = heitormurara.MeowfolioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meowfolio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Meowfolio";
+			};
+			name = Debug;
+		};
+		1A556DF62BC7275500EF192A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5Q3KXH668K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = heitormurara.MeowfolioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meowfolio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Meowfolio";
+			};
+			name = Release;
+		};
+		1A556DF82BC7275500EF192A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5Q3KXH668K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = heitormurara.MeowfolioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Meowfolio;
+			};
+			name = Debug;
+		};
+		1A556DF92BC7275500EF192A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5Q3KXH668K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = heitormurara.MeowfolioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Meowfolio;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A556DC72BC7275200EF192A /* Build configuration list for PBXProject "Meowfolio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A556DEF2BC7275500EF192A /* Debug */,
+				1A556DF02BC7275500EF192A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A556DF12BC7275500EF192A /* Build configuration list for PBXNativeTarget "Meowfolio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A556DF22BC7275500EF192A /* Debug */,
+				1A556DF32BC7275500EF192A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A556DF42BC7275500EF192A /* Build configuration list for PBXNativeTarget "MeowfolioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A556DF52BC7275500EF192A /* Debug */,
+				1A556DF62BC7275500EF192A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A556DF72BC7275500EF192A /* Build configuration list for PBXNativeTarget "MeowfolioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A556DF82BC7275500EF192A /* Debug */,
+				1A556DF92BC7275500EF192A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A556DC42BC7275200EF192A /* Project object */;
+}
