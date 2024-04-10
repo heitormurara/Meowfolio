@@ -11,7 +11,9 @@ struct BreedListView: View {
     @ObservedObject private var viewModel = BreedListViewModel()
     
     var body: some View {
-        Text("Hello, World!")
+        List(viewModel.breeds) {
+            BreedListItem($0)
+        }
     }
 }
 

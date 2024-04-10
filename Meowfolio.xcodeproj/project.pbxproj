@@ -11,7 +11,6 @@
 		1A556DD22BC7275200EF192A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556DD12BC7275200EF192A /* ContentView.swift */; };
 		1A556DD42BC7275400EF192A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A556DD32BC7275400EF192A /* Assets.xcassets */; };
 		1A556DD82BC7275400EF192A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A556DD72BC7275400EF192A /* Preview Assets.xcassets */; };
-		1A556DE22BC7275500EF192A /* MeowfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556DE12BC7275500EF192A /* MeowfolioTests.swift */; };
 		1A556DEC2BC7275500EF192A /* MeowfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556DEB2BC7275500EF192A /* MeowfolioUITests.swift */; };
 		1A556DEE2BC7275500EF192A /* MeowfolioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556DED2BC7275500EF192A /* MeowfolioUITestsLaunchTests.swift */; };
 		1A556DFC2BC72AEB00EF192A /* BreedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556DFB2BC72AEB00EF192A /* BreedListView.swift */; };
@@ -19,6 +18,7 @@
 		1A556E022BC72BA700EF192A /* BreedListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556E012BC72BA700EF192A /* BreedListItem.swift */; };
 		1A556E052BC734AC00EF192A /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556E042BC734AC00EF192A /* Breed.swift */; };
 		1A556E072BC734B300EF192A /* BreedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556E062BC734B300EF192A /* BreedImage.swift */; };
+		1A556E0D2BC7369000EF192A /* BreedListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556E0C2BC7369000EF192A /* BreedListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 		1A556DD52BC7275400EF192A /* Meowfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Meowfolio.entitlements; sourceTree = "<group>"; };
 		1A556DD72BC7275400EF192A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1A556DDD2BC7275500EF192A /* MeowfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeowfolioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A556DE12BC7275500EF192A /* MeowfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowfolioTests.swift; sourceTree = "<group>"; };
 		1A556DE72BC7275500EF192A /* MeowfolioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeowfolioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A556DEB2BC7275500EF192A /* MeowfolioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowfolioUITests.swift; sourceTree = "<group>"; };
 		1A556DED2BC7275500EF192A /* MeowfolioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowfolioUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		1A556E012BC72BA700EF192A /* BreedListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListItem.swift; sourceTree = "<group>"; };
 		1A556E042BC734AC00EF192A /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		1A556E062BC734B300EF192A /* BreedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImage.swift; sourceTree = "<group>"; };
+		1A556E0C2BC7369000EF192A /* BreedListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 		1A556DE02BC7275500EF192A /* MeowfolioTests */ = {
 			isa = PBXGroup;
 			children = (
-				1A556DE12BC7275500EF192A /* MeowfolioTests.swift */,
+				1A556E0A2BC7367800EF192A /* Modules */,
 			);
 			path = MeowfolioTests;
 			sourceTree = "<group>";
@@ -182,6 +182,22 @@
 				1A556E012BC72BA700EF192A /* BreedListItem.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1A556E0A2BC7367800EF192A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1A556E0B2BC7367E00EF192A /* BreedList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1A556E0B2BC7367E00EF192A /* BreedList */ = {
+			isa = PBXGroup;
+			children = (
+				1A556E0C2BC7369000EF192A /* BreedListViewModelTests.swift */,
+			);
+			path = BreedList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A556DE22BC7275500EF192A /* MeowfolioTests.swift in Sources */,
+				1A556E0D2BC7369000EF192A /* BreedListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

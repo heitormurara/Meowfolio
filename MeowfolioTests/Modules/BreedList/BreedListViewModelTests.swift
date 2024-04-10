@@ -1,5 +1,5 @@
 //
-//  MeowfolioTests.swift
+//  BreedListViewModelTests.swift
 //  MeowfolioTests
 //
 //  Created by Heitor Murara on 10/04/24.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class MeowfolioTests: XCTestCase {
+final class BreedListViewModelTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -27,7 +27,7 @@ final class MeowfolioTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        measure {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

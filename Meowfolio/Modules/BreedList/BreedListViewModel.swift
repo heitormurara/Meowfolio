@@ -8,5 +8,5 @@
 import Foundation
 
 final class BreedListViewModel: ObservableObject {
-    
+    @Published private(set) var breeds = [Breed]()
 }
