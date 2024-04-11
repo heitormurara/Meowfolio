@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BreedListItem: View {
     struct Constant {
+        static let height: CGFloat = 140
         static let imageWidth: CGFloat = 120
         static let imageHeight: CGFloat = 140
     }
@@ -24,20 +25,27 @@ struct BreedListItem: View {
             image
             information
         }
+        .frame(height: Constant.height)
     }
     
     private var image: some View {
-        AsyncImage(url: URL(string: breed.image.url)) { image in
-            image
-                .resizable()
-                .scaledToFit()
-        } placeholder: {
-            imagePlaceholder
+        VStack {
+            Spacer()
+            
+            AsyncImage(url: URL(string: breed.image.url)) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(
+                        RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
+                    )
+            } placeholder: {
+                imagePlaceholder
+            }
+            .frame(maxWidth: Constant.imageWidth, maxHeight: Constant.imageHeight)
+            
+            Spacer()
         }
-        .frame(width: Constant.imageWidth, height: Constant.imageHeight)
-        .clipShape(
-            RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
-        )
     }
     
     private var imagePlaceholder: some View {
@@ -50,6 +58,9 @@ struct BreedListItem: View {
         }
         .frame(width: Constant.imageWidth, height: Constant.imageHeight)
         .background(.gray)
+        .clipShape(
+            RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
+        )
     }
     
     private var information: some View {
@@ -58,31 +69,20 @@ struct BreedListItem: View {
                 .font(.headline)
             
             Label {
-                HStack {
-                    Text(breed.origin)
-                    Text("•")
-                    Text("\(breed.lifeSpan) years")
-                }
+                Text(breed.origin)
             } icon: {
                 Image(systemName: "mappin.and.ellipse")
             }
             .font(.caption)
             .foregroundStyle(.gray)
+            .labelStyle(SpaceLabelStyle(spacing: 4))
             
-            ForEach(breed.temperament, id: \.self) {
-                Text($0)
-            }
-            .font(.caption2)
-            .foregroundStyle(.gray)
+            Text(breed.temperament)
+                .font(.caption2)
+                .foregroundStyle(.gray)
         }
         .padding()
         .background(.white)
-        .clipShape(
-            UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0,
-                                                                     bottomLeading: 0,
-                                                                     bottomTrailing: 10,
-                                                                     topTrailing: 10))
-        )
     }
 }
 
@@ -94,7 +94,7 @@ struct BreedListItem: View {
                                     url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")
         let breed = Breed(id: "abys",
                           name: "Abyssinian",
-                          temperament: ["Active, Energetic, Independent, Intelligent, Gentle"],
+                          temperament: "Active, Energetic, Independent, Intelligent, Gentle",
                           origin: "Egypt",
                           lifeSpan: "14 - 15",
                           image: breedImage)

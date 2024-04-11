@@ -11,9 +11,15 @@ struct BreedListView: View {
     @ObservedObject private var viewModel = BreedListViewModel()
     
     var body: some View {
-        List(viewModel.breeds) {
-            BreedListItem($0)
+        let breeds = viewModel.breeds.enumerated().map({ $0 })
+        
+        return List(breeds, id: \.element.id) { index, breed in
+            BreedListItem(breed)
+                .onAppear {
+                    Task { await viewModel.getBreedsIfNeeded(currentIndex:index) }
+                }
         }
+        .background(.gray.opacity(0.1))
     }
 }
 

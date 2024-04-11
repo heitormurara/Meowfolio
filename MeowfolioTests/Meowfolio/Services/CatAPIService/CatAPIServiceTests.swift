@@ -46,8 +46,8 @@ final class CatAPIServiceTests: XCTestCase {
     
     private func makeBreeds() -> [Breed] {
         [
-            Breed(id: "1", name: "Breed 1", temperament: [], origin: "", lifeSpan: "", image: BreedImage(id: "", url: "")),
-            Breed(id: "2", name: "Breed 2", temperament: [], origin: "", lifeSpan: "", image: BreedImage(id: "", url: "")),
+            Breed(id: "1", name: "Breed 1", temperament: "", origin: "", lifeSpan: "", image: BreedImage(id: "", url: "")),
+            Breed(id: "2", name: "Breed 2", temperament: "", origin: "", lifeSpan: "", image: BreedImage(id: "", url: "")),
         ]
     }
 }

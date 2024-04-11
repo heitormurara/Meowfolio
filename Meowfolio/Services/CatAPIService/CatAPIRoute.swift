@@ -13,20 +13,24 @@ enum CatAPIRoute {
 
 extension CatAPIRoute: Route {
     var baseURL: String {
-        "https://api.thecatapi.com/v1"
+        "https://api.thecatapi.com"
     }
     
     var path: String {
         switch self {
         case .getBreeds:
-            return "/breeds"
+            return "/v1/breeds"
         }
     }
     
     var parameters: [String : String]? {
         switch self {
         case .getBreeds(let limit, let page):
-            return ["limit": "\(limit)", "page": "\(page)"]
+            return [
+                "limit": "\(limit)",
+                "page": "\(page)",
+                "api_key": ProcessInfo.processInfo.environment["cat_api_key"] ?? ""
+            ]
         }
     }
     
@@ -35,6 +39,6 @@ extension CatAPIRoute: Route {
     }
     
     var headers: [String : String]? {
-        ["x-api-key": ProcessInfo.processInfo.environment["cat_api_key"] ?? ""]
+        nil
     }
 }

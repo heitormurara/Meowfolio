@@ -10,8 +10,17 @@ import Foundation
 struct Breed: Identifiable, Decodable {
     let id: String
     let name: String
-    let temperament: [String]
+    let temperament: String
     let origin: String
     let lifeSpan: String
     let image: BreedImage
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case temperament
+        case origin
+        case lifeSpan = "life_span"
+        case image
+    }
 }
