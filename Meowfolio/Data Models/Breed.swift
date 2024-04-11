@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Breed: Identifiable {
+struct Breed: Identifiable, Decodable {
     let id: String
     let name: String
     let temperament: [String]

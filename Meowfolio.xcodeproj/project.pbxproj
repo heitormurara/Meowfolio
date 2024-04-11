@@ -29,6 +29,12 @@
 		1A63D9072BC766C500F9CCBB /* DummyRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D9062BC766C500F9CCBB /* DummyRoute.swift */; };
 		1A63D90B2BC76F5600F9CCBB /* DummyStringCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D90A2BC76F5600F9CCBB /* DummyStringCodable.swift */; };
 		1A63D90D2BC76FD000F9CCBB /* DummyIntCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D90C2BC76FD000F9CCBB /* DummyIntCodable.swift */; };
+		1A63D9102BC7710E00F9CCBB /* CatAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D90F2BC7710E00F9CCBB /* CatAPIService.swift */; };
+		1A63D9132BC7724F00F9CCBB /* CatAPIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D9122BC7724F00F9CCBB /* CatAPIRoute.swift */; };
+		1A63D9172BC7742800F9CCBB /* CatAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D9162BC7742800F9CCBB /* CatAPIServiceTests.swift */; };
+		1A63D9192BC777E500F9CCBB /* DummyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D9182BC777E500F9CCBB /* DummyError.swift */; };
+		1A63D91C2BC778BB00F9CCBB /* MockServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D91B2BC778BB00F9CCBB /* MockServiceProvider.swift */; };
+		1A63D91E2BC778D600F9CCBB /* CatAPIRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D91D2BC778D600F9CCBB /* CatAPIRouteTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +82,12 @@
 		1A63D9062BC766C500F9CCBB /* DummyRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRoute.swift; sourceTree = "<group>"; };
 		1A63D90A2BC76F5600F9CCBB /* DummyStringCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyStringCodable.swift; sourceTree = "<group>"; };
 		1A63D90C2BC76FD000F9CCBB /* DummyIntCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyIntCodable.swift; sourceTree = "<group>"; };
+		1A63D90F2BC7710E00F9CCBB /* CatAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIService.swift; sourceTree = "<group>"; };
+		1A63D9122BC7724F00F9CCBB /* CatAPIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIRoute.swift; sourceTree = "<group>"; };
+		1A63D9162BC7742800F9CCBB /* CatAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIServiceTests.swift; sourceTree = "<group>"; };
+		1A63D9182BC777E500F9CCBB /* DummyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyError.swift; sourceTree = "<group>"; };
+		1A63D91B2BC778BB00F9CCBB /* MockServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceProvider.swift; sourceTree = "<group>"; };
+		1A63D91D2BC778D600F9CCBB /* CatAPIRouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIRouteTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +139,7 @@
 		1A556DCE2BC7275200EF192A /* Meowfolio */ = {
 			isa = PBXGroup;
 			children = (
+				1A63D90E2BC770EC00F9CCBB /* Services */,
 				1A63D8F02BC7569900F9CCBB /* ServiceProvider */,
 				1A556E032BC734A300EF192A /* Data Models */,
 				1A556DFA2BC72ABE00EF192A /* Modules */,
@@ -248,6 +261,7 @@
 		1A63D8FE2BC7623300F9CCBB /* Meowfolio */ = {
 			isa = PBXGroup;
 			children = (
+				1A63D9142BC7741800F9CCBB /* Services */,
 				1A63D8FB2BC7597200F9CCBB /* ServiceProvider */,
 				1A556E0A2BC7367800EF192A /* Modules */,
 			);
@@ -260,6 +274,7 @@
 				1A63D8FF2BC7624500F9CCBB /* MockURLProtocol.swift */,
 				1A63D90A2BC76F5600F9CCBB /* DummyStringCodable.swift */,
 				1A63D90C2BC76FD000F9CCBB /* DummyIntCodable.swift */,
+				1A63D9182BC777E500F9CCBB /* DummyError.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -275,6 +290,7 @@
 		1A63D9042BC766B000F9CCBB /* Test Doubles */ = {
 			isa = PBXGroup;
 			children = (
+				1A63D91A2BC778AF00F9CCBB /* ServiceProvider */,
 				1A63D9052BC766B900F9CCBB /* Route */,
 			);
 			path = "Test Doubles";
@@ -286,6 +302,48 @@
 				1A63D9062BC766C500F9CCBB /* DummyRoute.swift */,
 			);
 			path = Route;
+			sourceTree = "<group>";
+		};
+		1A63D90E2BC770EC00F9CCBB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1A63D9112BC7724300F9CCBB /* CatAPIService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1A63D9112BC7724300F9CCBB /* CatAPIService */ = {
+			isa = PBXGroup;
+			children = (
+				1A63D90F2BC7710E00F9CCBB /* CatAPIService.swift */,
+				1A63D9122BC7724F00F9CCBB /* CatAPIRoute.swift */,
+			);
+			path = CatAPIService;
+			sourceTree = "<group>";
+		};
+		1A63D9142BC7741800F9CCBB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1A63D9152BC7741B00F9CCBB /* CatAPIService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1A63D9152BC7741B00F9CCBB /* CatAPIService */ = {
+			isa = PBXGroup;
+			children = (
+				1A63D9162BC7742800F9CCBB /* CatAPIServiceTests.swift */,
+				1A63D91D2BC778D600F9CCBB /* CatAPIRouteTests.swift */,
+			);
+			path = CatAPIService;
+			sourceTree = "<group>";
+		};
+		1A63D91A2BC778AF00F9CCBB /* ServiceProvider */ = {
+			isa = PBXGroup;
+			children = (
+				1A63D91B2BC778BB00F9CCBB /* MockServiceProvider.swift */,
+			);
+			path = ServiceProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,10 +476,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A63D9102BC7710E00F9CCBB /* CatAPIService.swift in Sources */,
 				1A556E052BC734AC00EF192A /* Breed.swift in Sources */,
 				1A556E072BC734B300EF192A /* BreedImage.swift in Sources */,
 				1A556DD22BC7275200EF192A /* ContentView.swift in Sources */,
 				1A63D8FA2BC758E700F9CCBB /* ServiceProviderError.swift in Sources */,
+				1A63D9132BC7724F00F9CCBB /* CatAPIRoute.swift in Sources */,
 				1A63D8F82BC7574000F9CCBB /* HTTPMethod.swift in Sources */,
 				1A63D8F62BC7572300F9CCBB /* Route.swift in Sources */,
 				1A63D8F42BC7570A00F9CCBB /* ServiceProvider.swift in Sources */,
@@ -438,7 +498,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A63D90B2BC76F5600F9CCBB /* DummyStringCodable.swift in Sources */,
+				1A63D9192BC777E500F9CCBB /* DummyError.swift in Sources */,
 				1A63D9002BC7624500F9CCBB /* MockURLProtocol.swift in Sources */,
+				1A63D91E2BC778D600F9CCBB /* CatAPIRouteTests.swift in Sources */,
+				1A63D91C2BC778BB00F9CCBB /* MockServiceProvider.swift in Sources */,
+				1A63D9172BC7742800F9CCBB /* CatAPIServiceTests.swift in Sources */,
 				1A63D8FD2BC7598000F9CCBB /* ServiceProviderTests.swift in Sources */,
 				1A63D9072BC766C500F9CCBB /* DummyRoute.swift in Sources */,
 				1A556E0D2BC7369000EF192A /* BreedListViewModelTests.swift in Sources */,

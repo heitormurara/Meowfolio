@@ -22,9 +22,6 @@ protocol Route {
     
     /// The headers to be used in the request.
     var headers: [String: String]? { get }
-    
-    /// Provides stub data for replacing Networking calls. Can be used for unit testing too.
-    var sampleData: Data? { get }
 }
 
 extension Route {

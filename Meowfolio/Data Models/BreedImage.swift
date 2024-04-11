@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BreedImage {
+struct BreedImage: Decodable {
     let id: String
     let url: String
 }

@@ -78,6 +78,13 @@
             ReferencedContainer = "container:Meowfolio.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "cat_api_key"
+            value = "live_SKGCjKndT8FbcoIESBIle9938OL3rWdcFwKrcbYMJX1tLkzJENf593ram3GSKw7Q"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
