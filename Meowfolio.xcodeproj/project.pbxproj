@@ -19,6 +19,16 @@
 		1A556E052BC734AC00EF192A /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556E042BC734AC00EF192A /* Breed.swift */; };
 		1A556E072BC734B300EF192A /* BreedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556E062BC734B300EF192A /* BreedImage.swift */; };
 		1A556E0D2BC7369000EF192A /* BreedListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A556E0C2BC7369000EF192A /* BreedListViewModelTests.swift */; };
+		1A63D8F22BC7570400F9CCBB /* ServiceProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D8F12BC7570400F9CCBB /* ServiceProviding.swift */; };
+		1A63D8F42BC7570A00F9CCBB /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D8F32BC7570A00F9CCBB /* ServiceProvider.swift */; };
+		1A63D8F62BC7572300F9CCBB /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D8F52BC7572300F9CCBB /* Route.swift */; };
+		1A63D8F82BC7574000F9CCBB /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D8F72BC7574000F9CCBB /* HTTPMethod.swift */; };
+		1A63D8FA2BC758E700F9CCBB /* ServiceProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D8F92BC758E700F9CCBB /* ServiceProviderError.swift */; };
+		1A63D8FD2BC7598000F9CCBB /* ServiceProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D8FC2BC7598000F9CCBB /* ServiceProviderTests.swift */; };
+		1A63D9002BC7624500F9CCBB /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D8FF2BC7624500F9CCBB /* MockURLProtocol.swift */; };
+		1A63D9072BC766C500F9CCBB /* DummyRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D9062BC766C500F9CCBB /* DummyRoute.swift */; };
+		1A63D90B2BC76F5600F9CCBB /* DummyStringCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D90A2BC76F5600F9CCBB /* DummyStringCodable.swift */; };
+		1A63D90D2BC76FD000F9CCBB /* DummyIntCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A63D90C2BC76FD000F9CCBB /* DummyIntCodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +65,17 @@
 		1A556E042BC734AC00EF192A /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		1A556E062BC734B300EF192A /* BreedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImage.swift; sourceTree = "<group>"; };
 		1A556E0C2BC7369000EF192A /* BreedListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModelTests.swift; sourceTree = "<group>"; };
+		1A63D8F12BC7570400F9CCBB /* ServiceProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviding.swift; sourceTree = "<group>"; };
+		1A63D8F32BC7570A00F9CCBB /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		1A63D8F52BC7572300F9CCBB /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		1A63D8F72BC7574000F9CCBB /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		1A63D8F92BC758E700F9CCBB /* ServiceProviderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderError.swift; sourceTree = "<group>"; };
+		1A63D8FC2BC7598000F9CCBB /* ServiceProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderTests.swift; sourceTree = "<group>"; };
+		1A63D8FF2BC7624500F9CCBB /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		1A63D9022BC765E500F9CCBB /* Meowfolio-UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Meowfolio-UnitTests.xctestplan"; sourceTree = "<group>"; };
+		1A63D9062BC766C500F9CCBB /* DummyRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRoute.swift; sourceTree = "<group>"; };
+		1A63D90A2BC76F5600F9CCBB /* DummyStringCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyStringCodable.swift; sourceTree = "<group>"; };
+		1A63D90C2BC76FD000F9CCBB /* DummyIntCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyIntCodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +106,7 @@
 		1A556DC32BC7275200EF192A = {
 			isa = PBXGroup;
 			children = (
+				1A63D9022BC765E500F9CCBB /* Meowfolio-UnitTests.xctestplan */,
 				1A556DCE2BC7275200EF192A /* Meowfolio */,
 				1A556DE02BC7275500EF192A /* MeowfolioTests */,
 				1A556DEA2BC7275500EF192A /* MeowfolioUITests */,
@@ -105,6 +127,7 @@
 		1A556DCE2BC7275200EF192A /* Meowfolio */ = {
 			isa = PBXGroup;
 			children = (
+				1A63D8F02BC7569900F9CCBB /* ServiceProvider */,
 				1A556E032BC734A300EF192A /* Data Models */,
 				1A556DFA2BC72ABE00EF192A /* Modules */,
 				1A556DCF2BC7275200EF192A /* MeowfolioApp.swift */,
@@ -127,7 +150,8 @@
 		1A556DE02BC7275500EF192A /* MeowfolioTests */ = {
 			isa = PBXGroup;
 			children = (
-				1A556E0A2BC7367800EF192A /* Modules */,
+				1A63D9012BC7624C00F9CCBB /* Helpers */,
+				1A63D8FE2BC7623300F9CCBB /* Meowfolio */,
 			);
 			path = MeowfolioTests;
 			sourceTree = "<group>";
@@ -198,6 +222,70 @@
 				1A556E0C2BC7369000EF192A /* BreedListViewModelTests.swift */,
 			);
 			path = BreedList;
+			sourceTree = "<group>";
+		};
+		1A63D8F02BC7569900F9CCBB /* ServiceProvider */ = {
+			isa = PBXGroup;
+			children = (
+				1A63D8F12BC7570400F9CCBB /* ServiceProviding.swift */,
+				1A63D8F32BC7570A00F9CCBB /* ServiceProvider.swift */,
+				1A63D8F52BC7572300F9CCBB /* Route.swift */,
+				1A63D8F72BC7574000F9CCBB /* HTTPMethod.swift */,
+				1A63D8F92BC758E700F9CCBB /* ServiceProviderError.swift */,
+			);
+			path = ServiceProvider;
+			sourceTree = "<group>";
+		};
+		1A63D8FB2BC7597200F9CCBB /* ServiceProvider */ = {
+			isa = PBXGroup;
+			children = (
+				1A63D9042BC766B000F9CCBB /* Test Doubles */,
+				1A63D9032BC766AD00F9CCBB /* Tests */,
+			);
+			path = ServiceProvider;
+			sourceTree = "<group>";
+		};
+		1A63D8FE2BC7623300F9CCBB /* Meowfolio */ = {
+			isa = PBXGroup;
+			children = (
+				1A63D8FB2BC7597200F9CCBB /* ServiceProvider */,
+				1A556E0A2BC7367800EF192A /* Modules */,
+			);
+			path = Meowfolio;
+			sourceTree = "<group>";
+		};
+		1A63D9012BC7624C00F9CCBB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1A63D8FF2BC7624500F9CCBB /* MockURLProtocol.swift */,
+				1A63D90A2BC76F5600F9CCBB /* DummyStringCodable.swift */,
+				1A63D90C2BC76FD000F9CCBB /* DummyIntCodable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1A63D9032BC766AD00F9CCBB /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1A63D8FC2BC7598000F9CCBB /* ServiceProviderTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		1A63D9042BC766B000F9CCBB /* Test Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				1A63D9052BC766B900F9CCBB /* Route */,
+			);
+			path = "Test Doubles";
+			sourceTree = "<group>";
+		};
+		1A63D9052BC766B900F9CCBB /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				1A63D9062BC766C500F9CCBB /* DummyRoute.swift */,
+			);
+			path = Route;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,7 +421,12 @@
 				1A556E052BC734AC00EF192A /* Breed.swift in Sources */,
 				1A556E072BC734B300EF192A /* BreedImage.swift in Sources */,
 				1A556DD22BC7275200EF192A /* ContentView.swift in Sources */,
+				1A63D8FA2BC758E700F9CCBB /* ServiceProviderError.swift in Sources */,
+				1A63D8F82BC7574000F9CCBB /* HTTPMethod.swift in Sources */,
+				1A63D8F62BC7572300F9CCBB /* Route.swift in Sources */,
+				1A63D8F42BC7570A00F9CCBB /* ServiceProvider.swift in Sources */,
 				1A556DFF2BC72AF900EF192A /* BreedListViewModel.swift in Sources */,
+				1A63D8F22BC7570400F9CCBB /* ServiceProviding.swift in Sources */,
 				1A556E022BC72BA700EF192A /* BreedListItem.swift in Sources */,
 				1A556DFC2BC72AEB00EF192A /* BreedListView.swift in Sources */,
 				1A556DD02BC7275200EF192A /* MeowfolioApp.swift in Sources */,
@@ -344,7 +437,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A63D90B2BC76F5600F9CCBB /* DummyStringCodable.swift in Sources */,
+				1A63D9002BC7624500F9CCBB /* MockURLProtocol.swift in Sources */,
+				1A63D8FD2BC7598000F9CCBB /* ServiceProviderTests.swift in Sources */,
+				1A63D9072BC766C500F9CCBB /* DummyRoute.swift in Sources */,
 				1A556E0D2BC7369000EF192A /* BreedListViewModelTests.swift in Sources */,
+				1A63D90D2BC76FD000F9CCBB /* DummyIntCodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

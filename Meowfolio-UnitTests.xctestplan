@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "2CAE3D49-C870-46C7-A2AC-108853E80004",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Meowfolio.xcodeproj",
+      "identifier" : "1A556DCB2BC7275200EF192A",
+      "name" : "Meowfolio"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Meowfolio.xcodeproj",
+        "identifier" : "1A556DDC2BC7275500EF192A",
+        "name" : "MeowfolioTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Meowfolio.xcodeproj",
+        "identifier" : "1A556DE62BC7275500EF192A",
+        "name" : "MeowfolioUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
