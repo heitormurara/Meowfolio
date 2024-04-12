@@ -30,13 +30,27 @@ struct BreedListView: View {
             .task {
                 await viewModel.getBreeds()
             }
-            .opacity(viewModel.loadingState == .loading ? 0 : 1)
-            .overlay {
-                if viewModel.loadingState == .loading {
-                    ProgressView()
-                }
-            }
+            .opacity(viewModel.loadingState == .loaded || viewModel.loadingState == .idle ? 1 : 0)
+            .overlay { loadingView }
+            .overlay { errorView }
             .navigationTitle(Localized.breedListTitle.string)
+        }
+    }
+    
+    @ViewBuilder
+    private var loadingView: some View {
+        if viewModel.loadingState == .loading {
+            ProgressView()
+        }
+    }
+    
+    @ViewBuilder
+    private var errorView: some View {
+        if case let .failed(error) = viewModel.loadingState {
+            let errorWithDescription = error as? ErrorWithDescription
+            ErrorView(errorDescription: errorWithDescription?.description) {
+                Task { await viewModel.getBreeds() }
+            }
         }
     }
 }

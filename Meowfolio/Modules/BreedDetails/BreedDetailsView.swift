@@ -27,12 +27,9 @@ struct BreedDetailsView: View {
         .task {
             await viewModel.getDetails()
         }
-        .opacity(viewModel.loadingState == .loading ? 0 : 1)
-        .overlay {
-            if viewModel.loadingState == .loading {
-                ProgressView()
-            }
-        }
+        .opacity(viewModel.loadingState == .loading || viewModel.loadingState == .idle ? 1 : 0)
+        .overlay { loadingView }
+        .overlay { errorView }
     }
     
     @ViewBuilder
@@ -139,6 +136,23 @@ struct BreedDetailsView: View {
     
     private func progressView(title: String, value: Int) -> some View {
         ProgressView(title, value: Float(value) / 5.0)
+    }
+    
+    @ViewBuilder
+    private var loadingView: some View {
+        if viewModel.loadingState == .loading {
+            ProgressView()
+        }
+    }
+    
+    @ViewBuilder
+    private var errorView: some View {
+        if case let .failed(error) = viewModel.loadingState {
+            let errorWithDescription = error as? ErrorWithDescription
+            ErrorView(errorDescription: errorWithDescription?.description) {
+                Task { await viewModel.getDetails() }
+            }
+        }
     }
 }
 

@@ -132,6 +132,138 @@
           }
         }
       }
+    },
+    "errorViewDescriptionDefault" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oops! Something unexpected happened. Please try again later, or contact support if the issue persists."
+          }
+        }
+      }
+    },
+    "errorViewHeadline" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Something went wrong"
+          }
+        }
+      }
+    },
+    "errorViewTryAgainButton" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try Again"
+          }
+        }
+      }
+    },
+    "serviceProviderErrorBadRequest" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Something went wrong with your request. Please make sure you've entered the correct information and try again."
+          }
+        }
+      }
+    },
+    "serviceProviderErrorInternalServerError" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oops! Something went wrong on our end. Our team has been notified, and we're working to fix it. Please try again later."
+          }
+        }
+      }
+    },
+    "serviceProviderErrorServiceUnavailable" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorry, the service is currently unavailable. We're working to restore it as soon as possible. Please try again later."
+          }
+        }
+      }
+    },
+    "serviceProviderErrorTooManyRequests" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Whoa, slow down! We're receiving too many requests right now. Please try again in a moment."
+          }
+        }
+      }
+    },
+    "serviceProviderErrorUnauthorized" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Access denied! It seems you don't have permission to access this service. Please contact support for assistance."
+          }
+        }
+      }
+    },
+    "serviceProviderErrorUnavailableURLRequest" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorry, we couldn't reach the requested service right now. Please try again later."
+          }
+        }
+      }
+    },
+    "serviceProviderErrorUnavailableURLResponse" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oops! We're having trouble getting a response from the service. Please check your internet connection and try again."
+          }
+        }
+      }
+    },
+    "serviceProviderErrorUnknown" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oops! Something unexpected happened. We're not sure what went wrong, but we're looking into it. Please try again later."
+          }
+        }
+      }
+    },
+    "serviceProviderErrorUnmapped" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uh-oh! We encountered an unexpected error. Please try again, or contact support if the issue persists."
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

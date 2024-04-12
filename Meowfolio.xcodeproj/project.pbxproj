@@ -37,6 +37,8 @@
 		1A6EC4FC2BC8B5D000312F9F /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EC4FB2BC8B5D000312F9F /* LoadingState.swift */; };
 		1A6EC5022BC8B60300312F9F /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EC5012BC8B60300312F9F /* Pagination.swift */; };
 		1A6EC5042BC8B60D00312F9F /* PaginationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EC5032BC8B60D00312F9F /* PaginationManager.swift */; };
+		1AA762F52BC8EAD400EBCDCE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA762F42BC8EAD400EBCDCE /* ErrorView.swift */; };
+		1AA762F92BC8EDFC00EBCDCE /* ErrorWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA762F82BC8EDFC00EBCDCE /* ErrorWithDescription.swift */; };
 		1ABEF20B2BC8B80D0048A822 /* PaginationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEF20A2BC8B80D0048A822 /* PaginationManagerTests.swift */; };
 		1ABEF20E2BC8C6D60048A822 /* BreedDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEF20D2BC8C6D60048A822 /* BreedDetailsView.swift */; };
 		1ABEF2102BC8C6DE0048A822 /* BreedDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEF20F2BC8C6DE0048A822 /* BreedDetailsViewModel.swift */; };
@@ -100,6 +102,8 @@
 		1A6EC4FB2BC8B5D000312F9F /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		1A6EC5012BC8B60300312F9F /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		1A6EC5032BC8B60D00312F9F /* PaginationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationManager.swift; sourceTree = "<group>"; };
+		1AA762F42BC8EAD400EBCDCE /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		1AA762F82BC8EDFC00EBCDCE /* ErrorWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWithDescription.swift; sourceTree = "<group>"; };
 		1ABEF20A2BC8B80D0048A822 /* PaginationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationManagerTests.swift; sourceTree = "<group>"; };
 		1ABEF20D2BC8C6D60048A822 /* BreedDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsView.swift; sourceTree = "<group>"; };
 		1ABEF20F2BC8C6DE0048A822 /* BreedDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 		1A556DCE2BC7275200EF192A /* Meowfolio */ = {
 			isa = PBXGroup;
 			children = (
+				1AA762F32BC8EACB00EBCDCE /* ReusableViews */,
 				1A63D90E2BC770EC00F9CCBB /* Services */,
 				1A63D8F02BC7569900F9CCBB /* ServiceProvider */,
 				1A556E032BC734A300EF192A /* Data Models */,
@@ -228,6 +233,7 @@
 				1A6EC5012BC8B60300312F9F /* Pagination.swift */,
 				1A6EC5032BC8B60D00312F9F /* PaginationManager.swift */,
 				1ABEF2172BC8E3BC0048A822 /* Localized.swift */,
+				1AA762F82BC8EDFC00EBCDCE /* ErrorWithDescription.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -365,6 +371,14 @@
 				1A63D91B2BC778BB00F9CCBB /* MockServiceProvider.swift */,
 			);
 			path = ServiceProvider;
+			sourceTree = "<group>";
+		};
+		1AA762F32BC8EACB00EBCDCE /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				1AA762F42BC8EAD400EBCDCE /* ErrorView.swift */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 		1ABEF2092BC8B7FE0048A822 /* Data Models */ = {
@@ -527,6 +541,7 @@
 				1A63D9202BC79FD700F9CCBB /* SpaceLabelStyle.swift in Sources */,
 				1A63D8F42BC7570A00F9CCBB /* ServiceProvider.swift in Sources */,
 				1A556DFF2BC72AF900EF192A /* BreedListViewModel.swift in Sources */,
+				1AA762F92BC8EDFC00EBCDCE /* ErrorWithDescription.swift in Sources */,
 				1A63D8F22BC7570400F9CCBB /* ServiceProviding.swift in Sources */,
 				1ABEF2122BC8C75C0048A822 /* BreedDetails.swift in Sources */,
 				1A6EC5042BC8B60D00312F9F /* PaginationManager.swift in Sources */,
@@ -536,6 +551,7 @@
 				1A556DFC2BC72AEB00EF192A /* BreedListView.swift in Sources */,
 				1ABEF2182BC8E3BC0048A822 /* Localized.swift in Sources */,
 				1A556DD02BC7275200EF192A /* MeowfolioApp.swift in Sources */,
+				1AA762F52BC8EAD400EBCDCE /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

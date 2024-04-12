@@ -24,6 +24,26 @@ enum Localized: String {
     case breedDetailsChildFriendlyScaleTitle
     case breedDetailsDogFriendlyScaleTitle
     case breedDetailsEnergyLevelScaleTitle
+    
+    // MARK: - ReusableViews
+    
+    // MARK: ErrorView
+    case errorViewHeadline
+    case errorViewTryAgainButton
+    case errorViewDescriptionDefault
+    
+    // MARK: - Errors
+    
+    // MARK: ServiceProviderError
+    case serviceProviderErrorUnavailableURLRequest
+    case serviceProviderErrorUnavailableURLResponse
+    case serviceProviderErrorBadRequest
+    case serviceProviderErrorUnauthorized
+    case serviceProviderErrorTooManyRequests
+    case serviceProviderErrorInternalServerError
+    case serviceProviderErrorServiceUnavailable
+    case serviceProviderErrorUnmapped
+    case serviceProviderErrorUnknown
 }
 
 extension Localized {
