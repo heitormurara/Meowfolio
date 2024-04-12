@@ -82,7 +82,6 @@ struct BreedListItem: View {
                 .foregroundStyle(.gray)
         }
         .padding()
-        .background(.white)
     }
 }
 
@@ -96,7 +95,6 @@ struct BreedListItem: View {
                           name: "Abyssinian",
                           temperament: "Active, Energetic, Independent, Intelligent, Gentle",
                           origin: "Egypt",
-                          lifeSpan: "14 - 15",
                           image: breedImage)
         BreedListItem(breed)
             .padding()

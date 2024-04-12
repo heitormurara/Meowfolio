@@ -9,6 +9,7 @@ import Foundation
 
 enum CatAPIRoute {
     case getBreeds(limit: Int, page: Int)
+    case getBreedDetails(id: String)
 }
 
 extension CatAPIRoute: Route {
@@ -20,6 +21,8 @@ extension CatAPIRoute: Route {
         switch self {
         case .getBreeds:
             return "/v1/breeds"
+        case .getBreedDetails(let id):
+            return "/v1/breeds/\(id)"
         }
     }
     
@@ -31,6 +34,8 @@ extension CatAPIRoute: Route {
                 "page": "\(page)",
                 "api_key": ProcessInfo.processInfo.environment["cat_api_key"] ?? ""
             ]
+        case .getBreedDetails:
+            return ["api_key": ProcessInfo.processInfo.environment["cat_api_key"] ?? ""]
         }
     }
     

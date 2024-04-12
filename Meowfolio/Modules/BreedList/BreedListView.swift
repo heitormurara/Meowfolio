@@ -14,19 +14,27 @@ struct BreedListView: View {
     var body: some View {
         let breeds = viewModel.breeds.enumerated().map({ $0 })
         
-        return List(breeds, id: \.element.id) { index, breed in
-            BreedListItem(breed)
-                .onAppear {
-                    Task { await viewModel.requestIfNeeded(currentIndex:index) }
+        return NavigationStack {
+            List(breeds, id: \.element.id) { index, breed in
+                NavigationLink {
+                    let viewModel = BreedDetailsViewModel(breed: breed)
+                    BreedDetailsView(viewModel: viewModel)
+                } label: {
+                    BreedListItem(breed)
+                        .onAppear {
+                            Task { await viewModel.requestIfNeeded(currentIndex:index) }
+                    }
                 }
-        }
-        .background(.gray.opacity(0.1))
-        .task {
-            await viewModel.getBreeds()
-        }
-        .overlay {
-            if viewModel.loadingState == .loading {
-                ProgressView()
+            }
+            .background(.gray.opacity(0.1))
+            .task {
+                await viewModel.getBreeds()
+            }
+            .opacity(viewModel.loadingState == .loading ? 0 : 1)
+            .overlay {
+                if viewModel.loadingState == .loading {
+                    ProgressView()
+                }
             }
         }
     }

@@ -12,7 +12,6 @@ import Combine
 final class BreedListViewModelTests: XCTestCase {
     func test_getBreeds_earlyReturns_whenLoading() async {
         let mockCatService = MockCatService()
-        
         let sut = BreedListViewModel(catService: mockCatService,
                                      loadingState: .loading)
         await sut.getBreeds()
@@ -43,9 +42,9 @@ final class BreedListViewModelTests: XCTestCase {
     }
     
     func test_getBreeds_onSuccess_addLoadedItemsToPagination() async {
-        let stubCatService = StubCatService {
-            .success([])
-        }
+        let stubCatService = StubCatService()
+        stubCatService.getBreedsHandler = { .success([]) }
+        
         let paginationMock = PaginationMock()
         let sut = BreedListViewModel(catService: stubCatService, paginationManager: paginationMock)
         await sut.getBreeds()
@@ -53,20 +52,18 @@ final class BreedListViewModelTests: XCTestCase {
     }
     
     func test_getBreeds_onSuccess_appendsBreeds() async {
-        let breed = Breed(id: "1", name: "", temperament: "", origin: "", lifeSpan: "", image: .init(id: "", url: ""))
-        let stubCatService = StubCatService {
-            .success([breed])
-        }
+        let breed = Breed(id: "1", name: "", temperament: "", origin: "", image: .init(id: "", url: ""))
+        let stubCatService = StubCatService()
+        stubCatService.getBreedsHandler = { .success([breed]) }
         let sut = BreedListViewModel(catService: stubCatService)
         await sut.getBreeds()
         XCTAssertEqual(sut.breeds.first?.id, breed.id)
     }
     
     func test_getBreeds_onSuccess_setLoadingState() async {
-        let breed = Breed(id: "1", name: "", temperament: "", origin: "", lifeSpan: "", image: .init(id: "", url: ""))
-        let stubCatService = StubCatService {
-            .success([breed])
-        }
+        let breed = Breed(id: "1", name: "", temperament: "", origin: "", image: .init(id: "", url: ""))
+        let stubCatService = StubCatService()
+        stubCatService.getBreedsHandler = { .success([breed]) }
         let sut = BreedListViewModel(catService: stubCatService)
         await sut.getBreeds()
         XCTAssertEqual(sut.loadingState, .loaded)
@@ -74,9 +71,8 @@ final class BreedListViewModelTests: XCTestCase {
     
     func test_getBreeds_onFailure_setFailureState() async {
         let error = DummyError.generic
-        let stubCatService = StubCatService {
-            .failure(error)
-        }
+        let stubCatService = StubCatService()
+        stubCatService.getBreedsHandler = { .failure(error) }
         let sut = BreedListViewModel(catService: stubCatService)
         await sut.getBreeds()
         XCTAssertEqual(sut.loadingState, .failed(error))
@@ -132,27 +128,38 @@ final class PaginationMock: Pagination {
 
 final class DummyCatService: CatService {
     func getBreeds(limit: Int, page: Int) async -> Result<[Breed], Error> {
-        return .success([])
+        .success([])
+    }
+    
+    func getBreedDetails(_ breed: Breed) async -> Result<BreedDetails, Error> {
+        .failure(DummyError.generic)
     }
 }
 
 final class MockCatService: CatService {
     var getBreedsCount = 0
+    var getBreedDetailsCount = 0
     
     func getBreeds(limit: Int, page: Int) async -> Result<[Meowfolio.Breed], Error> {
         getBreedsCount += 1
         return .success([])
     }
+    
+    func getBreedDetails(_ breed: Breed) async -> Result<BreedDetails, Error> {
+        getBreedDetailsCount += 1
+        return .failure(DummyError.generic)
+    }
 }
 
 final class StubCatService: CatService {
-    var handler: (() -> Result<[Breed], Error>)
-    
-    init(handler: @escaping () -> Result<[Breed], Error>) {
-        self.handler = handler
-    }
+    var getBreedsHandler: (() -> Result<[Breed], Error>)? = nil
+    var getBreedDetailsHandler: (() -> Result<BreedDetails, Error>)? = nil
     
     func getBreeds(limit: Int, page: Int) async -> Result<[Breed], Error> {
-        handler()
+        getBreedsHandler?() ?? .failure(DummyError.generic)
+    }
+    
+    func getBreedDetails(_ breed: Breed) async -> Result<BreedDetails, Error> {
+        getBreedDetailsHandler?() ?? .failure(DummyError.generic)
     }
 }

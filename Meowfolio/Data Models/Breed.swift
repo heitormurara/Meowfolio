@@ -12,7 +12,6 @@ struct Breed: Identifiable, Decodable {
     let name: String
     let temperament: String
     let origin: String
-    let lifeSpan: String
     let image: BreedImage
     
     enum CodingKeys: String, CodingKey {
@@ -20,7 +19,6 @@ struct Breed: Identifiable, Decodable {
         case name
         case temperament
         case origin
-        case lifeSpan = "life_span"
         case image
     }
 }
