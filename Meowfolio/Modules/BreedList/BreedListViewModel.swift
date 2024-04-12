@@ -6,52 +6,48 @@
 //
 
 import Foundation
+import SwiftUI
 
-final class BreedListViewModel: ObservableObject {
+final class BreedListViewModel<L>: ObservableObject where L: Loading {
     private let catService: CatService
-    private let limit = 10
-    private let itemsFromEndThreshold = 3
-    private var page = 0
-    private var itemsLoadedCount = 0
+    private var paginationManager: Pagination
     
     @Published private(set) var breeds = [Breed]()
-    @Published private(set) var isLoading = false
+    @Published private(set) var loading: L
     
-    init(catService: CatService = CatAPIService()) {
+    init(catService: CatService = CatAPIService(), 
+         loading: L = Loader(state: .idle),
+         paginationManager: Pagination = PaginationManager(),
+         breeds: [Breed] = [Breed]()) {
         self.catService = catService
-        Task { await getBreeds() }
+        self.loading = loading
+        self.paginationManager = paginationManager
+        self.breeds = breeds
     }
     
-    func getBreedsIfNeeded(currentIndex: Int) async {
-        guard !isLoading, isThresholdMet(currentIndex: currentIndex) else { return }
-        page += 1
-        await getBreeds()
+    func requestIfNeeded(currentIndex: Int) async {
+        guard loading.state != .loading else { return }
+        await paginationManager.requestIfNeeded(currentIndex: currentIndex) {
+            await self.getBreeds()
+        }
     }
     
-    private func getBreeds() async {
-        setLoading(true)
-        let result = await catService.getBreeds(limit: limit, page: page)
+    func getBreeds() async {
+        guard loading.state != .loading else { return }
+        loading.set(.loading)
+        
+        let result = await catService.getBreeds(limit: paginationManager.limit, page: paginationManager.page)
         
         switch result {
         case .success(let breeds):
-            itemsLoadedCount += breeds.count
+            paginationManager.addLoadedItems(amount: breeds.count)
+            
             await MainActor.run {
                 self.breeds.append(contentsOf: breeds)
             }
+            loading.set(.loaded)
         case .failure(let error):
-            break
-        }
-        
-        setLoading(false)
-    }
-    
-    private func isThresholdMet(currentIndex: Int) -> Bool {
-        (itemsLoadedCount - currentIndex) == itemsFromEndThreshold
-    }
-    
-    private func setLoading(_ isLoading: Bool) {
-        Task { @MainActor in
-            self.isLoading = isLoading
+            loading.set(.failed(error))
         }
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BreedListView: View {
     @ObservedObject private var viewModel = BreedListViewModel()
+    @State private var isLoading = false
     
     var body: some View {
         let breeds = viewModel.breeds.enumerated().map({ $0 })
@@ -16,10 +17,18 @@ struct BreedListView: View {
         return List(breeds, id: \.element.id) { index, breed in
             BreedListItem(breed)
                 .onAppear {
-                    Task { await viewModel.getBreedsIfNeeded(currentIndex:index) }
+                    Task { await viewModel.requestIfNeeded(currentIndex:index) }
                 }
         }
         .background(.gray.opacity(0.1))
+        .task {
+            await viewModel.getBreeds()
+        }
+        .overlay {
+            if viewModel.loading.state == .loading {
+                ProgressView()
+            }
+        }
     }
 }
 
