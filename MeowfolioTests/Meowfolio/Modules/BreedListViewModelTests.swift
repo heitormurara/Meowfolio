@@ -6,29 +6,33 @@
 //
 
 import XCTest
+import Combine
 @testable import Meowfolio
 
 final class BreedListViewModelTests: XCTestCase {
     func test_getBreeds_earlyReturns_whenLoading() async {
         let mockCatService = MockCatService()
-        let loadingSpy = LoadingSpy()
-        loadingSpy.state = .loading
         
         let sut = BreedListViewModel(catService: mockCatService,
-                                     loading: loadingSpy)
+                                     loadingState: .loading)
         await sut.getBreeds()
         
-        XCTAssertFalse(loadingSpy.hasSetState(.loading))
+        XCTAssertEqual(sut.loadingState, .loading)
         XCTAssertEqual(mockCatService.getBreedsCount, 0)
     }
     
     func test_getBreeds_setLoading() async {
         let dummyCatService = DummyCatService()
-        let loadingSpy = LoadingSpy()
-        let sut = BreedListViewModel(catService: dummyCatService,
-                                     loading: loadingSpy)
+        let sut = BreedListViewModel(catService: dummyCatService)
+        var loadingStates = [LoadingState]()
+        var cancellables = Set<AnyCancellable>()
+        
+        sut.$loadingState.sink {
+            loadingStates.append($0)
+        }.store(in: &cancellables)
+        
         await sut.getBreeds()
-        XCTAssertTrue(loadingSpy.hasSetState(.loading))
+        XCTAssertTrue(loadingStates.contains(where: { $0 == .loading }))
     }
     
     func test_getBreeds_requestsFromService() async {
@@ -63,10 +67,9 @@ final class BreedListViewModelTests: XCTestCase {
         let stubCatService = StubCatService {
             .success([breed])
         }
-        let loadingSpy = LoadingSpy()
-        let sut = BreedListViewModel(catService: stubCatService, loading: loadingSpy)
+        let sut = BreedListViewModel(catService: stubCatService)
         await sut.getBreeds()
-        XCTAssertTrue(loadingSpy.hasSetState(.loaded))
+        XCTAssertEqual(sut.loadingState, .loaded)
     }
     
     func test_getBreeds_onFailure_setFailureState() async {
@@ -74,18 +77,15 @@ final class BreedListViewModelTests: XCTestCase {
         let stubCatService = StubCatService {
             .failure(error)
         }
-        let loadingSpy = LoadingSpy()
-        let sut = BreedListViewModel(catService: stubCatService, loading: loadingSpy)
+        let sut = BreedListViewModel(catService: stubCatService)
         await sut.getBreeds()
-        XCTAssertTrue(loadingSpy.hasSetState(.failed(error)))
+        XCTAssertEqual(sut.loadingState, .failed(error))
     }
     
     func test_requestIfNeeded_earlyReturns_whenLoading() async {
         let paginationMock = PaginationMock()
-        let loadingSpy = LoadingSpy()
-        loadingSpy.state = .loading
         
-        let sut = BreedListViewModel(loading: loadingSpy, paginationManager: paginationMock)
+        let sut = BreedListViewModel(loadingState: .loading, paginationManager: paginationMock)
         await sut.requestIfNeeded(currentIndex: 1)
         XCTAssertFalse(paginationMock.requestedIfNeeded)
     }
@@ -127,19 +127,6 @@ final class PaginationMock: Pagination {
     
     func requestIfNeeded(currentIndex: Int, completion: @escaping () async -> Void) async {
         requestedIfNeeded = true
-    }
-}
-
-final class LoadingSpy: Loading {
-    var state: LoadingState = .idle
-    var setStates: [LoadingState] = []
-    
-    func set(_ newState: LoadingState) {
-        setStates.append(newState)
-    }
-    
-    func hasSetState(_ state: LoadingState) -> Bool {
-        setStates.first(where: { $0 == state }) != nil
     }
 }
 

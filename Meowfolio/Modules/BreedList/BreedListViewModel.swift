@@ -8,33 +8,33 @@
 import Foundation
 import SwiftUI
 
-final class BreedListViewModel<L>: ObservableObject where L: Loading {
+final class BreedListViewModel: ObservableObject {
     private let catService: CatService
     private var paginationManager: Pagination
     
     @Published private(set) var breeds = [Breed]()
-    @Published private(set) var loading: L
+    @Published private(set) var loadingState: LoadingState
     
     init(catService: CatService = CatAPIService(), 
-         loading: L = Loader(state: .idle),
+         loadingState: LoadingState = .idle,
          paginationManager: Pagination = PaginationManager(),
          breeds: [Breed] = [Breed]()) {
         self.catService = catService
-        self.loading = loading
+        self.loadingState = loadingState
         self.paginationManager = paginationManager
         self.breeds = breeds
     }
     
     func requestIfNeeded(currentIndex: Int) async {
-        guard loading.state != .loading else { return }
+        guard loadingState != .loading else { return }
         await paginationManager.requestIfNeeded(currentIndex: currentIndex) {
             await self.getBreeds()
         }
     }
     
     func getBreeds() async {
-        guard loading.state != .loading else { return }
-        loading.set(.loading)
+        guard loadingState != .loading else { return }
+        await MainActor.run { loadingState = .loading }
         
         let result = await catService.getBreeds(limit: paginationManager.limit, page: paginationManager.page)
         
@@ -44,10 +44,10 @@ final class BreedListViewModel<L>: ObservableObject where L: Loading {
             
             await MainActor.run {
                 self.breeds.append(contentsOf: breeds)
+                loadingState = .loaded
             }
-            loading.set(.loaded)
         case .failure(let error):
-            loading.set(.failed(error))
+            await MainActor.run { loadingState = .failed(error) }
         }
     }
 }

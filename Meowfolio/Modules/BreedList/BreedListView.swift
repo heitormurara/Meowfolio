@@ -25,7 +25,7 @@ struct BreedListView: View {
             await viewModel.getBreeds()
         }
         .overlay {
-            if viewModel.loading.state == .loading {
+            if viewModel.loadingState == .loading {
                 ProgressView()
             }
         }
