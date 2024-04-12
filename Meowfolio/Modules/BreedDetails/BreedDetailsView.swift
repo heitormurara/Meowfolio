@@ -15,9 +15,12 @@ struct BreedDetailsView: View {
     }
     
     var body: some View {
-        ScrollView {
-            content
-                .padding()
+        NavigationStack {
+            ScrollView {
+                content
+                    .padding()
+            }
+            .navigationTitle(viewModel.breed.name)
         }
         .frame(maxWidth: .infinity)
         .background(.gray.opacity(0.1))
@@ -36,24 +39,22 @@ struct BreedDetailsView: View {
     private var content: some View {
         if let breedDetails = viewModel.breedDetails {
             VStack(alignment: .leading, spacing: 20) {
-                mainInformationView(for: breedDetails)
+                imageView(for: breedDetails)
                 descriptionView(for: breedDetails)
                 informationView(for: breedDetails)
             }
-            
-            Spacer()
         }
     }
     
-    private func mainInformationView(for breedDetails: BreedDetails) -> some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Text(breedDetails.name)
-                .font(.title)
-                .fontWeight(.bold)
-            
-            image
-                .padding(.top, 10)
-            
+    private func imageView(for breedDetails: BreedDetails) -> some View {
+        VStack(alignment: .leading, spacing: 20) {
+            asyncImage
+            imageCaption(for: breedDetails)
+        }
+    }
+    
+    private func imageCaption(for breedDetails: BreedDetails) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
             Label {
                 Text(breedDetails.origin)
             } icon: {
@@ -62,16 +63,14 @@ struct BreedDetailsView: View {
             .font(.caption)
             .foregroundStyle(.gray)
             .labelStyle(SpaceLabelStyle(spacing: 4))
-            .padding(.top, 20)
             
             Text(breedDetails.temperament)
                 .font(.caption2)
                 .foregroundStyle(.gray)
-                .padding(.top, 10)
         }
     }
     
-    private var image: some View {
+    private var asyncImage: some View {
         AsyncImage(url: URL(string: viewModel.breed.image.url)) { image in
             image
                 .resizable()
@@ -120,17 +119,17 @@ struct BreedDetailsView: View {
     }
     
     private func rectangleInfoView(title: String, subtitle: String) -> some View {
-            VStack {
-                Text(title)
-                    .fontWeight(.medium)
-                Text(subtitle)
-                    .font(.caption)
-            }
-            .padding()
-            .overlay(
-                RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
-                    .stroke(.gray.opacity(0.3), lineWidth: 1)
-            )
+        VStack {
+            Text(title)
+                .fontWeight(.medium)
+            Text(subtitle)
+                .font(.caption)
+        }
+        .padding()
+        .overlay(
+            RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
+                .stroke(.gray.opacity(0.3), lineWidth: 1)
+        )
     }
     
     private func progressView(title: String, value: Int) -> some View {

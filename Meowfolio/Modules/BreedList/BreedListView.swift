@@ -36,6 +36,7 @@ struct BreedListView: View {
                     ProgressView()
                 }
             }
+            .navigationTitle("Cat Breeds")
         }
     }
 }
