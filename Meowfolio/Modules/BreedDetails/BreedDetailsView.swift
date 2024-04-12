@@ -15,12 +15,14 @@ struct BreedDetailsView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                content
-                    .padding()
+        GeometryReader { geometry in
+            NavigationStack {
+                ScrollView {
+                    content(with: geometry)
+                        .padding()
+                }
+                .navigationTitle(viewModel.breed.name)
             }
-            .navigationTitle(viewModel.breed.name)
         }
         .frame(maxWidth: .infinity)
         .background(.gray.opacity(0.1))
@@ -33,10 +35,12 @@ struct BreedDetailsView: View {
     }
     
     @ViewBuilder
-    private var content: some View {
+    private func content(with geometry: GeometryProxy) -> some View {
         if let breedDetails = viewModel.breedDetails {
             VStack(alignment: .leading, spacing: 20) {
                 imageView(for: breedDetails)
+                    .frame(maxHeight: geometry.size.height)
+                
                 descriptionView(for: breedDetails)
                 informationView(for: breedDetails)
             }
