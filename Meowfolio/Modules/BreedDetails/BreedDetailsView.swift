@@ -85,7 +85,7 @@ struct BreedDetailsView: View {
     
     private func descriptionView(for breedDetails: BreedDetails) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Description")
+            Text(Localized.breedDetailsDescriptionSectionTitle.string)
                 .font(.headline)
             
             Text(breedDetails.description)
@@ -95,26 +95,31 @@ struct BreedDetailsView: View {
     
     private func informationView(for breedDetails: BreedDetails) -> some View {
         VStack(alignment: .leading, spacing: 20) {
-            Text("Information")
+            Text(Localized.breedDetailsInformationSectionTitle.string)
                 .font(.headline)
             
             HStack {
-                rectangleInfoView(title: "\(breedDetails.weight.metric) kgs",
-                                  subtitle: "Weight")
+                rectangleInfoView(title: String(format: Localized.breedDetailsWeightCaptionFormatValue.string, breedDetails.weight.metric),
+                                  subtitle: Localized.breedDetailsWeightCaptionTitle.string)
                 
-                rectangleInfoView(title: "\(breedDetails.lifeSpan) years",
-                                  subtitle: "Life Span")
+                rectangleInfoView(title: String(format: Localized.breedDetailsLifeSpanCaptionFormatValue.string, breedDetails.lifeSpan),
+                                  subtitle: Localized.breedDetailsLifeSpanCaptionTitle.string)
             }
             
-            progressView(title: "Adaptability", value: breedDetails.adaptabilityScale)
+            progressView(title: Localized.breedDetailsAdaptabilityScaleTitle.string, 
+                         value: breedDetails.adaptabilityScale)
             
-            progressView(title: "Affection Level", value: breedDetails.affectionLevelScale)
+            progressView(title: Localized.breedDetailsAffectionLevelScaleTitle.string, 
+                         value: breedDetails.affectionLevelScale)
             
-            progressView(title: "Child Friendly", value: breedDetails.childFriendlyScale)
+            progressView(title: Localized.breedDetailsChildFriendlyScaleTitle.string, 
+                         value: breedDetails.childFriendlyScale)
             
-            progressView(title: "Dog Friendly", value: breedDetails.dogFriendlyScale)
+            progressView(title: Localized.breedDetailsDogFriendlyScaleTitle.string,
+                         value: breedDetails.dogFriendlyScale)
             
-            progressView(title: "Energy Level", value: breedDetails.energyLevelScale)
+            progressView(title: Localized.breedDetailsEnergyLevelScaleTitle.string,
+                         value: breedDetails.energyLevelScale)
         }
     }
     

@@ -42,6 +42,8 @@
 		1ABEF2102BC8C6DE0048A822 /* BreedDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEF20F2BC8C6DE0048A822 /* BreedDetailsViewModel.swift */; };
 		1ABEF2122BC8C75C0048A822 /* BreedDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEF2112BC8C75C0048A822 /* BreedDetails.swift */; };
 		1ABEF2142BC8DDFA0048A822 /* BreedDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEF2132BC8DDFA0048A822 /* BreedDetailsViewModelTests.swift */; };
+		1ABEF2162BC8E33C0048A822 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1ABEF2152BC8E33C0048A822 /* Localizable.xcstrings */; };
+		1ABEF2182BC8E3BC0048A822 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEF2172BC8E3BC0048A822 /* Localized.swift */; };
 		1AD31DF42BC869C000FC844F /* BreedListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD31DF32BC869C000FC844F /* BreedListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,8 @@
 		1ABEF20F2BC8C6DE0048A822 /* BreedDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsViewModel.swift; sourceTree = "<group>"; };
 		1ABEF2112BC8C75C0048A822 /* BreedDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetails.swift; sourceTree = "<group>"; };
 		1ABEF2132BC8DDFA0048A822 /* BreedDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		1ABEF2152BC8E33C0048A822 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		1ABEF2172BC8E3BC0048A822 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		1AD31DF32BC869C000FC844F /* BreedListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +167,7 @@
 				1A556DD32BC7275400EF192A /* Assets.xcassets */,
 				1A556DD52BC7275400EF192A /* Meowfolio.entitlements */,
 				1A556DD62BC7275400EF192A /* Preview Content */,
+				1ABEF2152BC8E33C0048A822 /* Localizable.xcstrings */,
 			);
 			path = Meowfolio;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				1A6EC4FB2BC8B5D000312F9F /* LoadingState.swift */,
 				1A6EC5012BC8B60300312F9F /* Pagination.swift */,
 				1A6EC5032BC8B60D00312F9F /* PaginationManager.swift */,
+				1ABEF2172BC8E3BC0048A822 /* Localized.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -484,6 +490,7 @@
 			files = (
 				1A556DD82BC7275400EF192A /* Preview Assets.xcassets in Resources */,
 				1A556DD42BC7275400EF192A /* Assets.xcassets in Resources */,
+				1ABEF2162BC8E33C0048A822 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +534,7 @@
 				1A6EC4FC2BC8B5D000312F9F /* LoadingState.swift in Sources */,
 				1A6EC5022BC8B60300312F9F /* Pagination.swift in Sources */,
 				1A556DFC2BC72AEB00EF192A /* BreedListView.swift in Sources */,
+				1ABEF2182BC8E3BC0048A822 /* Localized.swift in Sources */,
 				1A556DD02BC7275200EF192A /* MeowfolioApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
