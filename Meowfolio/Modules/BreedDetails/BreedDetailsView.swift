@@ -27,7 +27,7 @@ struct BreedDetailsView: View {
         .task {
             await viewModel.getDetails()
         }
-        .opacity(viewModel.loadingState == .loading || viewModel.loadingState == .idle ? 1 : 0)
+        .opacity(viewModel.loadingState == .loaded || viewModel.loadingState == .idle ? 1 : 0)
         .overlay { loadingView }
         .overlay { errorView }
     }
